@@ -17,6 +17,10 @@ app.use(express.json());
 app.use(cors());
 const contact = require('./models/contact');
 
+app.get('/', (request, response)=>{
+    return response.send('The app is live')
+})
+
 app.post('/contact', (request,response)=>{
     const data = request.body;
     const contactmsg = {
