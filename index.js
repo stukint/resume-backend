@@ -1,6 +1,6 @@
 const express = require('express');
 const app = new express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const cors = require('cors');
 app.listen(PORT, (err)=>{
     const connect = !err ? 'Server is live' : err;
